@@ -12,6 +12,7 @@ python runprimorun.py &
 Two files are going to be created:
 
 phrases  < Where all the phrases are stored
+
 channels < all the channels where the bot was started (/start command required)
 
 The bot have the following commands:
