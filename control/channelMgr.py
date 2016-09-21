@@ -5,7 +5,7 @@ from utils import filemanager
 
 
 def loadChannels():
-    myfile = filemanager.MyFile('channels', True, True, True)
+    myfile = filemanager.MyFile('channels', True, False, False)
     myglobals.CHANNELS = myfile.read_lines()
 
 
@@ -22,6 +22,7 @@ def Check2Save(channel):
 def saveChannel(channel, write, append):
     myfile = filemanager.MyFile('channels', False, write, append)
     myfile.write_line(str(channel) + "\n")
+    loadChannels()
 
 
 def sayHello2Channels(bot):
