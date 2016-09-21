@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import telebot
+import types
 
 from utils import myglobals
 from control import channelMgr
@@ -68,9 +69,9 @@ def del_phrase(message):
 @bot.inline_handler(lambda query: query.query == 'putas')
 def query_text(inline_query):
     try:
-        r1 = telebot.types.InlineQueryResultArticle('1', 'Puta 1', telebot.types.InputTextMessageContent('@daronwolff'))
-        r2 = telebot.types.InlineQueryResultArticle('2', 'Puta 2', telebot.types.InputTextMessageContent('@luis_vallejo'))
-        r3 = telebot.types.InlineQueryResultArticle('3', 'Puta 3', telebot.types.InputTextMessageContent('@Rossel'))
+        r1 = types.InlineQueryResultArticle('1', 'Puta 1', types.InputTextMessageContent('@daronwolff'))
+        r2 = types.InlineQueryResultArticle('2', 'Puta 2', types.InputTextMessageContent('@luis_vallejo'))
+        r3 = types.InlineQueryResultArticle('3', 'Puta 3', types.InputTextMessageContent('@Rossel'))
         bot.answer_inline_query(inline_query.id, [r1, r2, r3])
     except Exception as e:
         print(e)
