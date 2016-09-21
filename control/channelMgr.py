@@ -11,7 +11,9 @@ def loadChannels():
 
 def Check2Save(channel):
     if myglobals.CHANNELS:
-        if channel not in myglobals.CHANNELS:
+        if (str(channel) + '\n') not in myglobals.CHANNELS:
+            print (str(channel) + '\n')
+            print myglobals.CHANNELS
             saveChannel(channel, False, True)
     else:
         saveChannel(channel, True, False)
@@ -25,4 +27,6 @@ def saveChannel(channel, write, append):
 def sayHello2Channels(bot):
     if myglobals.CHANNELS:
         for channel in myglobals.CHANNELS:
-            bot.send_message(channel, "Ya llegue putos...")
+            msg = "Ya llegue bitches... El colega es mi putito"
+            msg += "\nChequen https://github.com/crash2over/PrimoBot"
+            bot.send_message(channel, msg)
