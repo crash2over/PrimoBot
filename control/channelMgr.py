@@ -28,6 +28,6 @@ def saveChannel(channel, write, append):
 def sayHello2Channels(bot):
     if myglobals.CHANNELS:
         for channel in myglobals.CHANNELS:
-            msg = "Ya llegue bitches... El colega es mi putito"
+            msg = "Ya llegue bitches... El colega me la chupa"
             msg += "\nChequen https://github.com/crash2over/PrimoBot"
             bot.send_message(channel, msg)

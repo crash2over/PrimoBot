@@ -65,9 +65,20 @@ def del_phrase(message):
         bot.reply_to(message, "Chavos tomense la vida en serio, si es numero manden un numero...")
 
 
+@bot.inline_handler(lambda query: query.query == 'putas')
+def query_text(inline_query):
+    try:
+        r1 = telebot.types.InlineQueryResultArticle('1', 'Puta 1', telebot.types.InputTextMessageContent('@daronwolff'))
+        r2 = telebot.types.InlineQueryResultArticle('2', 'Puta 2', telebot.types.InputTextMessageContent('@luis_vallejo'))
+        r3 = telebot.types.InlineQueryResultArticle('3', 'Puta 3', telebot.types.InputTextMessageContent('@Rossel'))
+        bot.answer_inline_query(inline_query.id, [r1, r2, r3])
+    except Exception as e:
+        print(e)
+
+
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-    bot.reply_to(message, message.text)
+    bot.reply_to(message, "Que quieres?")
 
 channelMgr.loadChannels()
 channelMgr.sayHello2Channels(bot)
