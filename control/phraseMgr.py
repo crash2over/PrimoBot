@@ -15,8 +15,7 @@ def addPhraseAndUpdate(message):
         myfile = filemanager.MyFile('phrases', False, False, True)
         mytext = message.text + '\n'
         myfile.write_line(mytext.split(' ', 1)[1])
-        myfile = filemanager.MyFile('phrases', True, False, False)
-        myglobals.PHRASES = myfile.read_lines()
+        loadPhrases()
         return True
     except:
         return False
@@ -28,8 +27,7 @@ def delPhraseAndUpdate(message):
         myglobals.PHRASES.pop(linenum)
         myfile = filemanager.MyFile('phrases', False, True, False)
         myfile.write_all(myglobals.PHRASES)
-        myfile = filemanager.MyFile('phrases', True, False, False)
-        myglobals.PHRASES = myfile.read_lines()
+        loadPhrases()
         return True
     except:
         return False
