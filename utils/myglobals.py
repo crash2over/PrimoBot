@@ -4,3 +4,5 @@ TOKEN = ""
 START = False
 PHRASES = []
 CHANNELS = []
+PUTAS = []
+PUTASPHRASES = []

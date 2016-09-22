@@ -35,7 +35,6 @@ def delPhraseAndUpdate(message):
 
 def getRandomAndPhrase():
     dic = {}
-    print str(len(myglobals.PHRASES))
     dic['random'] = int(random.random() * 1000.0) % (len(myglobals.PHRASES))
     dic['phrase'] = myglobals.PHRASES[dic['random']]
     return dic
