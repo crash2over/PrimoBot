@@ -11,6 +11,9 @@ def mywhores(mytext):
 
         index = int(random.random() * 1000.0) % (len(myglobals.PUTASPHRASES))
         putaphrase = myglobals.PUTASPHRASES[index]
-        return (puta + putaphrase)
+        if '@crassh' in puta:
+            return (puta + "ese si me hace mujer y monta rico verdad @daronwolff")
+        else:
+            return (puta + putaphrase)
     else:
         return "Que quieres?"

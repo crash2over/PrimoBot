@@ -19,9 +19,8 @@ def addPutasAndUpdate(message):
         myfile = filemanager.MyFile('putas', False, False, True)
         mytext = message.text + '\n'
         if '@' in mytext:
-            if '@crassh' not in mytext:
-                myfile.write_line(mytext.split(' ', 1)[1])
-                loadPutas()
+            myfile.write_line(mytext.split(' ', 1)[1])
+            loadPutas()
             return True
         else:
             return False
