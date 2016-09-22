@@ -33,8 +33,8 @@ def send_help(message):
     myhelp += "\n/delphrase [num] elimino una frase mas cuidado!!"
     myhelp += "\n/numphrases te digo cuantas hay..."
     myhelp += "\nHey!! intenta esto <@elprimobot putas>"
-    myhelp += "\addputa [@puta]"
-    myhelp += "\addputasphrase [phrase]"
+    myhelp += "\n/addputa [@puta]"
+    myhelp += "\n/addputasphrase [phrase]"
     bot.reply_to(message, myhelp)
 
 
